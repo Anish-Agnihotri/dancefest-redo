@@ -13,7 +13,9 @@ export default function Layout({ children }) {
       <Header />
 
       {/* Layout: Content */}
-      <div className={styles.layout__content}>{children}</div>
+      <div className={styles.layout__content}>
+        <div className={styles.layout__content_sizer}>{children}</div>
+      </div>
 
       {/* Layout: Footer */}
       <Footer />

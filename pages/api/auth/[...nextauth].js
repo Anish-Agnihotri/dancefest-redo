@@ -16,6 +16,9 @@ const databaseConfig = {
   },
 };
 
+// Administrator emails
+const adminEmails = ["contact+admin@anishagnihotri.com"];
+
 export default NextAuth({
   // Site URL
   site: process.env.SITE || "http://localhost:3000",
@@ -41,6 +44,16 @@ export default NextAuth({
   jwt: {
     // JWT secret
     secret: process.env.NA_JWT_SECRET,
+  },
+  // Handle administrator access
+  callbacks: {
+    // On session request
+    session: async (session, user) => {
+      // If user email is included among admins, attach isAdmin === true to session
+      session.isAdmin = adminEmails.includes(user.email) ? true : false;
+      // Return altered session
+      return Promise.resolve(session);
+    },
   },
   // Pass previously configured database config
   database: databaseConfig,

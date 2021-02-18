@@ -84,6 +84,11 @@ Layout: Content
 .layout__content {
   padding: 30px 64px 0px 64px;
   min-height: calc(100vh - 150px);
+
+  .layout__content_sizer {
+    max-width: 1200px;
+    margin: 0px auto;
+  }
 }
 
 /*
@@ -117,6 +122,6 @@ Layout: Responsiveness
   }
 
   .layout__content {
-    padding: 20px 0px 16px 16px;
+    padding: 20px 16px 0px 16px;
   }
 }
