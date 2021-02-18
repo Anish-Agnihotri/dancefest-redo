@@ -36,5 +36,5 @@ function TextInput({ type, value, onChange, onEnter, fullWidth, ...props }) {
   );
 }
 
-// Export Inputs
+// Export inputs
 export { TextInput };
