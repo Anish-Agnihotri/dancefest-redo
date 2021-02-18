@@ -5,7 +5,7 @@ import { getSession } from "next-auth/client"; // Session handling
 export default function Settings() {
   return (
     <Layout>
-      <span>Settings</span>
+      <h1>Design blocker: Settings</h1>
     </Layout>
   );
 }
