@@ -6,7 +6,10 @@ import { getEventByID } from "pages/api/events/get"; // Back-end helper
 export default function Event({ event }) {
   return (
     <Layout>
-      <h1>{event.id}</h1>
+      <h1>
+        {event.id} - {event.name}
+      </h1>
+      <p>TODO</p>
     </Layout>
   );
 }
